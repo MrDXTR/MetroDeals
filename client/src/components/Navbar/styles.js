@@ -9,6 +9,7 @@ export default makeStyles((theme) => ({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
+    backgroundImage: 'linear-gradient(to right, #6DD5FA 0%,#ffffff 100%)',
     padding: '10px 50px',
     [theme.breakpoints.down('sm')]: {
       flexDirection: 'column',
