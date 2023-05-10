@@ -1,0 +1,9 @@
+
+body {
+    background-image: url("images/back2.png");
+}
+
+* {
+    /* font-family: 'Noto Sans JP' !important; */
+    font-family: 'Heebo', sans-serif !important;
+}
