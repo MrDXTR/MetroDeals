@@ -2,13 +2,14 @@ import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles((theme) => ({
   appBarSearch: {
-    borderRadius: 30,
+    borderRadius: 20,
     marginBottom: '1rem',
     display: 'flex',
     padding: '16px',
+    backgroundImage: 'linear-gradient(to right,#20BDFF 0%,#A5FECB 100%)',
   },
   pagination: {
-    borderRadius: 40,
+    borderRadius: 50,
     marginTop: '1rem',
     padding: '16px',
   },

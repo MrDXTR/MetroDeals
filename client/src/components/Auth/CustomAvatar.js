@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
     width: theme.spacing(7),
     height: theme.spacing(7),
     fontSize: theme.spacing(3),
-    backgroundColor: 'transparent',
+    backgroundColor: 'grey',
     color: theme.palette.primary.main,
     borderRadius: '50%',
     border: `2px solid ${theme.palette.primary.main}`,

@@ -8,7 +8,9 @@ export default makeStyles((theme) => ({
     },
   },
   paper: {
-    padding: theme.spacing(2),
+    padding: theme.spacing(4),
+    borderRadius: '40px',
+    backgroundImage: 'linear-gradient(to right, #acb6e5 0%,#86fde8 100%)',
   },
   form: {
     display: 'flex',
@@ -17,9 +19,14 @@ export default makeStyles((theme) => ({
   },
   fileInput: {
     width: '97%',
-    margin: '10px 0',
+    margin: '15px 0',
   },
   buttonSubmit: {
     marginBottom: 10,
+    borderRadius: '40px',
+  },
+  buttonClear: {
+    marginBottom: 10,
+    borderRadius: '40px',
   },
 }));

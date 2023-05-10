@@ -8,6 +8,7 @@ export default makeStyles((theme) => ({
     alignItems: 'center',
     padding: theme.spacing(2),
     borderRadius: '40px',
+    backgroundImage: 'linear-gradient(to right, #acb6e5 0%,#86fde8 100%)',
   },
   root: {
     '& .MuiTextField-root': {
@@ -30,4 +31,5 @@ export default makeStyles((theme) => ({
     marginBottom: theme.spacing(2),
     borderRadius: '40px',
   },
+
 }));
