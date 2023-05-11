@@ -6,7 +6,7 @@ export default makeStyles((theme) => ({
     marginBottom: '1rem',
     display: 'flex',
     padding: '16px',
-    backgroundImage: 'linear-gradient(to right, #6DD5FA 0%,#ffffff 100%)',
+    backgroundImage: 'linear-gradient(to top, #6DD5FA 0%, #fffff1 60%,#ffffff 100%)',
   },
   pagination: {
     borderRadius: 50,
