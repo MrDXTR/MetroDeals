@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container } from '@material-ui/core';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import { GoogleOAuthProvider } from '@react-oauth/google';
 
 import PostDetails from './components/PostDetails/PostDetails';
 import Navbar from './components/Navbar/Navbar';
@@ -12,6 +13,7 @@ const App = () => {
   const user = JSON.parse(localStorage.getItem('profile'));
 
   return (
+    <GoogleOAuthProvider clientId='1023596719155-ue8pemcat82f1bbiabos6cjkioack7n4.apps.googleusercontent.com'> 
     <BrowserRouter>
       <Container maxWidth="xl">
         <Navbar />
@@ -25,6 +27,7 @@ const App = () => {
         </Switch>
       </Container>
     </BrowserRouter>
+    </GoogleOAuthProvider>
   );
 };
 
