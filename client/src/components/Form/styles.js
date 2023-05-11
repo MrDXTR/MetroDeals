@@ -10,7 +10,7 @@ export default makeStyles((theme) => ({
   paper: {
     padding: theme.spacing(4),
     borderRadius: '40px',
-    backgroundImage: 'linear-gradient(to right, #6DD5FA 0%,#ffffff 100%)',
+    backgroundImage: 'linear-gradient(to top, #6DD5FA 0%,#ffffff 100%)',
   },
   form: {
     display: 'flex',

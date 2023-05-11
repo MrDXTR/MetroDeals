@@ -12,7 +12,7 @@ export default makeStyles((theme) => ({
     borderRadius: 50,
     marginTop: '1rem',
     padding: '16px',
-    backgroundImage: 'linear-gradient(to right, #D8BFD8 0%,#ffffff 100%)',
+    backgroundImage: 'linear-gradient(to top, #D8BFD8 0%,#ffffff 100%)',
   },
   searchButton: {
     backgroundColor: '#3f51b5',
