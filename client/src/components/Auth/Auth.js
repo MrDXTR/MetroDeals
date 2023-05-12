@@ -44,7 +44,7 @@ const authPage = () => {
             }}
             onClick={switchMode}
           >
-            {loginSide ? 'LOGIN AS USER' : 'LOGIN AS ADMIN'}
+            {loginSide ? 'USER PORTAL' : 'SELLER PORTAL'}
           </button>
         </Grid>
       </Grid>

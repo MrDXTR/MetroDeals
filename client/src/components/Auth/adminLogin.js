@@ -36,6 +36,12 @@ const SignUp = () => {
     }
   };
 
+  const switchMode = () => {
+    setForm(initialState);
+    setIsSignup((prevIsSignup) => !prevIsSignup);
+    setShowPassword(false);
+  };
+
   const googleSuccess = async (res) => {
     const decoded = jwtDecode(res.credential);
     console.log(decoded);
@@ -74,11 +80,18 @@ const SignUp = () => {
         <CustomAvatar className={classes.CustomAvatar}>
           <LockOutlinedIcon />
         </CustomAvatar>
-        <Typography component="h1" variant="h5">Admin Login</Typography>
+        <Typography className='m-3' component="h1" variant="h5">{isSignup ? "Seller Sign Up": "Seller Login"}</Typography>
         <form className={classes.form} onSubmit={handleSubmit}>
           <Grid container spacing={2}>
+          { isSignup && (
+            <>
+              <Input name="firstName" label="First Name" handleChange={handleChange} autoFocus half />
+              <Input name="lastName" label="Last Name" handleChange={handleChange} half />
+            </>
+          )}
             <Input name="email" label="Email Address" handleChange={handleChange} type="email" />
             <Input name="password" label="Password" handleChange={handleChange} type={showPassword ? 'text' : 'password'} handleShowPassword={handleShowPassword} />
+            { isSignup && <Input name="confirmPassword" label="Repeat Password" handleChange={handleChange} type="password" /> }
           </Grid>
           <Button type="submit" fullWidth variant="contained" color="primary" className={classes.submit}>
             { isSignup ? 'Sign Up' : 'Sign In' }
@@ -96,6 +109,9 @@ const SignUp = () => {
           />
           <Grid container justify="flex-end">
             <Grid item>
+              <Button onClick={switchMode}>
+                { isSignup ? 'Already have an account? Sign in' : "Don't have an account? Sign Up" }
+              </Button>
             </Grid>
           </Grid>
         </form>
