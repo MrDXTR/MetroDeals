@@ -25,7 +25,8 @@ const CreatorOrTag = () => {
 
   return (
     <div>
-      <Typography variant="h2">{name}</Typography>
+      <Typography variant="h5">More By The Seller</Typography>
+      <Typography variant="h3">{name}</Typography>
       <Divider style={{ margin: '20px 0 50px 0' }} />
       {isLoading ? <CircularProgress /> : (
         <Grid container alignItems="stretch" spacing={3}>
