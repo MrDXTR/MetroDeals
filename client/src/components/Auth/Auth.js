@@ -34,7 +34,7 @@ const authPage = () => {
             className={classes.submit}
             style={{
               width: '100%',
-              padding: '10px 26px',
+              padding: '0.7rem 5rem',
               backgroundColor: '#3F51B5',
               color: 'white',
               borderRadius: '40px',
