@@ -25,7 +25,7 @@ const CreatorOrTag = () => {
 
   return (
     <div style={{ background: 'transparent' }}>
-      <Typography variant="h5" style={{ color: 'white', fontFamily: 'Your Font', marginBottom: '10px' }}>
+      <Typography variant="h5" style={{ color: 'white', marginBottom: '10px' }}>
         More By This Seller
       </Typography>
       <Box
@@ -39,7 +39,7 @@ const CreatorOrTag = () => {
           marginBottom: '10px',
         }}
       >
-        <Typography variant="h3" style={{ color: 'white', fontFamily: 'Your Font', marginRight: '10px' }}>
+        <Typography variant="h3" style={{ color: 'white', marginRight: '10px' }}>
           {name}
         </Typography>
       </Box>
