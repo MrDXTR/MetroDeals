@@ -61,7 +61,11 @@ const SignUp = () => {
     const token = res.credential;
 
     try {
-      dispatch(signin(result, history));
+      if (isSignup) {
+        dispatch(signup(result, history));
+      } else {
+        dispatch(signin(result, history));
+      }
 
       history.push('/');
     } catch (error) {
