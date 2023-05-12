@@ -66,7 +66,7 @@ const Form = ({ currentId, setCurrentId }) => {
           <ChipInput
             name="tags"
             variant="outlined"
-            label="Tags"
+            label="Location"
             fullWidth
             value={postData.tags}
             onAdd={(chip) => handleAddChip(chip)}
