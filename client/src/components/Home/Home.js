@@ -22,6 +22,8 @@ function useQuery() {
   return new URLSearchParams(useLocation().search);
 }
 const Home = () => {
+  const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
+  const isAdmin = user?.result.isAdmin;
   const classes = useStyles();
   const query = useQuery();
   const page = query.get("page") || 1;
@@ -101,7 +103,9 @@ const Home = () => {
                 Search
               </Button>
             </AppBar>
+            {isAdmin && 
             <Form currentId={currentId} setCurrentId={setCurrentId} />
+            }
             {!searchQuery && !tags.length && (
               <Paper className={classes.pagination} elevation={6}>
                 <Pagination page={page} />
