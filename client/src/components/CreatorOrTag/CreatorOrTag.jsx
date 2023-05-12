@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useParams, useLocation } from 'react-router-dom';
-import { Typography, CircularProgress, Grid, Divider } from '@material-ui/core';
+import { Typography, CircularProgress, Grid, Divider, Box } from '@material-ui/core';
 import { useDispatch, useSelector } from 'react-redux';
 
 import Post from '../Posts/Post/Post';
@@ -24,11 +24,29 @@ const CreatorOrTag = () => {
   if (!posts.length && !isLoading) return 'No posts';
 
   return (
-    <div>
-      <Typography variant="h5">More By The Seller</Typography>
-      <Typography variant="h3">{name}</Typography>
-      <Divider style={{ margin: '20px 0 50px 0' }} />
-      {isLoading ? <CircularProgress /> : (
+    <div style={{ background: 'transparent' }}>
+      <Typography variant="h5" style={{ color: 'white', fontFamily: 'Your Font', marginBottom: '10px' }}>
+        More By This Seller
+      </Typography>
+      <Box
+        display="flex"
+        alignItems="center"
+        justifyContent="flex-start"
+        style={{
+          background: 'rgba(255, 255, 255, 0.2)',
+          borderRadius: '4px',
+          padding: '5px 10px',
+          marginBottom: '10px',
+        }}
+      >
+        <Typography variant="h3" style={{ color: 'white', fontFamily: 'Your Font', marginRight: '10px' }}>
+          {name}
+        </Typography>
+      </Box>
+      <Divider style={{ margin: '20px 0 50px 0', background: 'white' }} />
+      {isLoading ? (
+        <CircularProgress style={{ color: 'white' }} />
+      ) : (
         <Grid container alignItems="stretch" spacing={3}>
           {posts?.map((post) => (
             <Grid key={post._id} item xs={12} sm={12} md={6} lg={3}>
