@@ -12,7 +12,7 @@ const CommentSection = ({ post }) => {
   const [comments, setComments] = useState(post?.comments);
   const classes = useStyles();
   const commentsRef = useRef();
-  const isSignedIn = false;
+  let isSignedIn = false;
   if (user?.result?.name){
     isSignedIn = true;
   }
