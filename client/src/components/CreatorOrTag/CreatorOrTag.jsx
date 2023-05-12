@@ -11,12 +11,16 @@ const CreatorOrTag = () => {
   const dispatch = useDispatch();
   const { posts, isLoading } = useSelector((state) => state.posts);
 
+
+
   const location = useLocation();
 
   useEffect(() => {
     if (location.pathname.startsWith('/tags')) {
+
       dispatch(getPostsBySearch({ tags: name }));
     } else {
+
       dispatch(getPostsByCreator(name));
     }
   }, []);
@@ -26,7 +30,8 @@ const CreatorOrTag = () => {
   return (
     <div style={{ background: 'transparent' }}>
       <Typography variant="h5" style={{ color: 'white', marginBottom: '10px' }}>
-        More By This Seller
+
+
       </Typography>
       <Box
         display="flex"
