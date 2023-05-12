@@ -86,7 +86,7 @@ const SignUp = () => {
         <CustomAvatar className={classes.CustomAvatar}>
           <LockOutlinedIcon />
         </CustomAvatar>
-        <Typography component="h1" variant="h5">User Login</Typography>
+        <Typography className='m-3' component="h1" variant="h5">{isSignup ? "User Sign Up": "User Login"}</Typography>
         <form className={classes.form} onSubmit={handleSubmit}>
           <Grid container spacing={2}>
           { isSignup && (
