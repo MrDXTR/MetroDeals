@@ -12,6 +12,10 @@ const CommentSection = ({ post }) => {
   const [comments, setComments] = useState(post?.comments);
   const classes = useStyles();
   const commentsRef = useRef();
+  const isSignedIn = false;
+  if (user?.result?.name){
+    isSignedIn = true;
+  }
 
   const handleComment = async () => {
     const newComments = await dispatch(commentPost(`${user?.result?.name}: ${comment}`, post._id));
@@ -39,9 +43,11 @@ const CommentSection = ({ post }) => {
           <Typography gutterBottom variant="h6">Write a comment</Typography>
           <TextField fullWidth rows={4} variant="outlined" label="Comment" multiline value={comment} onChange={(e) => setComment(e.target.value)} />
           <br />
+          {isSignedIn ? 
           <Button style={{ marginTop: '10px' }} fullWidth disabled={!comment.length} color="primary" variant="contained" onClick={handleComment}>
             Comment
           </Button>
+: <Typography>Please Sign In</Typography>}
         </div>
       </div>
     </div>
