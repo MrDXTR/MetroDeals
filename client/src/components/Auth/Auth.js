@@ -1,6 +1,7 @@
+
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import {Button, Paper, Grid, Typography, Container } from '@material-ui/core';
+import {Paper, Grid, Typography, Container } from '@material-ui/core';
 import { useHistory } from 'react-router-dom';
 import { GoogleLogin } from 'react-google-login';
 import LockOutlinedIcon from './icon2.js';
@@ -17,29 +18,39 @@ import CustomAvatar from './CustomAvatar';
 
 import { GoogleOAuthProvider } from '@react-oauth/google';
 
-
 const authPage = () => {
   const [loginSide, setLoginSide] = useState(false);
-
   const switchMode = () => {
     setLoginSide((prevLoginSide) => !prevLoginSide);
   };
   const classes = useStyles();
 
-  return(
+  return (
     <div>
-
+      {loginSide ? <AdminLogin /> : <UserLogin />}
       <Grid container justify="center">
-      <Grid item>
-      <Button fullWidth variant="contained" color="primary" className={classes.submit} onClick={switchMode}>
-              { loginSide ? "Login As User" : "Login As Admin" }
-      </Button>
+        <Grid item>
+          <button
+            className={classes.submit}
+            style={{
+              width: '100%',
+              padding: '10px 26px',
+              backgroundColor: '#3F51B5',
+              color: 'white',
+              borderRadius: '40px',
+              border: "2px solid #ffffff",
+              cursor: 'pointer',
+              fontWeight: 'bold',
+            }}
+            onClick={switchMode}
+          >
+            {loginSide ? 'LOGIN AS USER' : 'LOGIN AS ADMIN'}
+          </button>
+        </Grid>
       </Grid>
-      </Grid>
-      {loginSide ? <AdminLogin/> : <UserLogin/>}
-
     </div>
   );
 };
 
 export default authPage;
+
