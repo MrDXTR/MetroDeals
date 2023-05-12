@@ -22,6 +22,7 @@ The "Online Deal Finder" application is a web-based platform that enables users 
 - Search and browse deals on products from various online stores.
 - Search for deals using different location tags.
 - View detailed product information, including reviews from other users.
+- View the products sold by a particular seller.
 - Leave comments and feedback on products and deals.
 - Like products with other users.
 - Seller registration and authentication using JWT and Google OAuth.
