@@ -7,6 +7,7 @@ import ChipInput from 'material-ui-chip-input';
 
 import { createPost, updatePost } from '../../actions/posts';
 import useStyles from './styles';
+import jwtDecode from 'jwt-decode';
 
 const Form = ({ currentId, setCurrentId }) => {
   const [postData, setPostData] = useState({ title: '', message: '', tags: [], selectedFile: '' });
@@ -15,6 +16,16 @@ const Form = ({ currentId, setCurrentId }) => {
   const classes = useStyles();
   const user = JSON.parse(localStorage.getItem('profile'));
   const history = useHistory();
+  let decodedToken = jwtDecode(user?.token);
+  let userID;
+  const googleId = decodedToken?.sub;
+
+  if (googleId) {
+    userID = googleId;
+  }
+  else{
+    userID = user?.result?._id;
+  }
 
   const clear = () => {
     setCurrentId(0);
@@ -30,10 +41,10 @@ const Form = ({ currentId, setCurrentId }) => {
     e.preventDefault();
 
     if (currentId === 0) {
-      dispatch(createPost({ ...postData, name: user?.result?.name }, history));
+      dispatch(createPost({ ...postData, name: user?.result?.name, userID }, history));
       clear();
     } else {
-      dispatch(updatePost(currentId, { ...postData, name: user?.result?.name }));
+      dispatch(updatePost(currentId, { ...postData, name: user?.result?.name, userID }));
       clear();
     }
   };

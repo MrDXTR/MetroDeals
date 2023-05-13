@@ -24,8 +24,9 @@ export const signin = async (req, res) => {
     if (!isPasswordCorrect) return res.status(400).json({ message: "Invalid credentials. Wrong Email or Password Entered" });
 
     const token = jwt.sign({ email: oldUser.email, id: oldUser._id }, secret, { expiresIn: "1h" });
+    const result = {...oldUser._doc, userId: oldUser._id};
 
-    res.status(200).json({ result: oldUser, token });
+    res.status(200).json({ result: result, token });
   } catch (err) {
     res.status(500).json({ message: "Something went wrong" });
   }
@@ -39,8 +40,9 @@ export const signin = async (req, res) => {
     if (userType != isAdmin) return res.status(400).json({ message: "Invalid User Login. Please Select The Correct User Type!" });
 
     const token = cred;
+    const result = {...oldUser._doc, userId: oldUser._id};
 
-    res.status(200).json({ result: oldUser, token });
+    res.status(200).json({ result: result, token });
 
   } catch (err) {
     res.status(500).json({ message: "Something went wrong" });

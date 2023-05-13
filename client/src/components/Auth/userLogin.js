@@ -44,7 +44,6 @@ const SignUp = () => {
 
   const googleSuccess = async (res) => {
     const decoded = jwtDecode(res.credential);
-    console.log(decoded);
     
     const result = {
       email: decoded.email,
