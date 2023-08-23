@@ -2,7 +2,7 @@
 ### Capstone Final Project
 
 ## Introduction
-This repository contains the source code for the "Online Deal Finder" application, developed as a part of the Capstone Final Project by the following students of B.Tech (Computer Science Engineering) at NIIT University:
+This repository contains the source code for an Online Deal Finder application, developed as a part of the Capstone Final Project by the following students of B.Tech (Computer Science Engineering) at NIIT University:
 - Parth Madaan (BT20HCS059)
 - Manav Chillar (BT20HCS212)
 - Parjanya Pandey (BT20HCS216)
@@ -18,7 +18,7 @@ This repository contains the source code for the "Online Deal Finder" applicatio
 - Redux and Thunk middleware for state management
 
 ## Features
-The "Online Deal Finder" application is a web-based platform that enables users to search for and compare deals on products from various online stores. Key features of the application include:
+Metro Deals is an Online Deal Finder application which is a web-based platform that enables users to search for and compare deals on products from various online stores. Key features of the application include:
 
 - User registration and authentication using JWT and Google OAuth.
 - Search and browse deals on products from various online stores.
