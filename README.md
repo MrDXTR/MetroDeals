@@ -1,4 +1,6 @@
-# Capstone Final Project
+# Metro Deals
+### Capstone Final Project
+
 ## Introduction
 This repository contains the source code for the "Online Deal Finder" application, developed as a part of the Capstone Final Project by the following students of B.Tech (Computer Science Engineering) at NIIT University:
 - Parth Madaan (BT20HCS059)
